@@ -20,6 +20,7 @@ Use Sketch to build a mockup quickly, and polish. Export element designed for pr
 * Player can submit its score
 * Player can exit
 * Player can remove see the letter have guessed.
+* The word can be more than 12 letters, so landscape is better.
 
 The final implementation is as follows:
 
