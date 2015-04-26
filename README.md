@@ -30,7 +30,7 @@ The final implementation is as follows:
 ![](./images/3 - Game Screen.png)
 
 * Result Dialog
-![](./4 - Result Dialog.png)
+![](./images/4 - Result Dialog.png)
 
 #### 2. Programming
  The whole java code contains serval package, aims to `Adapter`, `Hangman API`, `Molude`, `Activity/Fragment`, `Custom View`.
