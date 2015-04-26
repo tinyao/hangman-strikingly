@@ -1,11 +1,11 @@
-## Hangman 
+# Hangman Android - Strikingly Interview Test
 
-### Introduction
+## Introduction
 This is a Android Client for the Strinkingly Hangman Interview Test. 
 
-### Implementation
+## Implementation
 
-#### 1. Mockup Design
+### 1. Mockup Design
 Use Sketch to build a mockup quickly, and polish. Export element designed for programming.
 
 ![](./images/1 - sketch mockup.png)
@@ -32,7 +32,7 @@ The final implementation is as follows:
 * Result Dialog
 ![](./images/4 - Result Dialog.png)
 
-#### 2. Programming
+### 2. Programming
  The whole java code contains serval package, aims to `Adapter`, `Hangman API`, `Molude`, `Activity/Fragment`, `Custom View`.
  
 ```
@@ -62,7 +62,7 @@ The final implementation is as follows:
 * Custom TextView to support letter spacing lower than lollipop
 * Display well for both phone and tablet.
 
-#### 3. Gaming
+### 3. Gaming
 
 After play the game once and once again, I got `1180` finally. And, To be honest, I actually archieve this score, partly with website help (similar as `crossword solving`). 
 
