@@ -8,6 +8,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -75,7 +76,7 @@ public class HomeActivity extends BaseGameActivity {
         // show progress dialog
         pd = new ProgressDialog(this);
         pd.setMessage(getResources().getString(R.string.loading_new_game));
-        pd.show();
+        loading();
 
         // start a new hangman
         final Hangman hangman = Hangman.newGame();
@@ -133,5 +134,12 @@ public class HomeActivity extends BaseGameActivity {
     protected void onDestroy() {
         NetClient.cancel(HangmanApi.ACTION.START_GAME);
         super.onDestroy();
+    }
+
+    private void loading() {
+        pd.getWindow().setFlags(WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE, WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE);
+        pd.show();
+        pd.getWindow().getDecorView().setSystemUiVisibility(getWindow().getDecorView().getSystemUiVisibility());
+        pd.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE);
     }
 }

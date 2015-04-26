@@ -3,6 +3,7 @@ package im.ycz.hangman.ui;
 import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
@@ -76,6 +77,7 @@ public class MainActivity extends BaseGameActivity implements ResultDailog.OnAct
         keyboradOne.setOnItemClickListener(itemListener);
         keyboradTwo.setOnItemClickListener(itemListener);
         keyboradThree.setOnItemClickListener(itemListener);
+
         loadingDialog = new ProgressDialog(this);
         loadingDialog.setCanceledOnTouchOutside(false);
     }
@@ -150,8 +152,7 @@ public class MainActivity extends BaseGameActivity implements ResultDailog.OnAct
     }
 
     private void getResult() {
-        loadingDialog.setMessage(getResources().getString(R.string.loading_get_result));
-        loadingDialog.show();
+        loading(R.string.loading_get_result);
         hangman.getResult();
     }
 
@@ -233,6 +234,18 @@ public class MainActivity extends BaseGameActivity implements ResultDailog.OnAct
     private ResultDailog dialog;
 
     /**
+     * Show loading dialog, prevent exiting immerse mode
+     * @param resid
+     */
+    private void loading(int resid) {
+        loadingDialog.setMessage(getResources().getString(resid));
+        loadingDialog.getWindow().setFlags(WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE, WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE);
+        loadingDialog.show();
+        loadingDialog.getWindow().getDecorView().setSystemUiVisibility(getWindow().getDecorView().getSystemUiVisibility());
+        loadingDialog.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE);
+    }
+
+    /**
      * Show the result score dialog
      * @param hangman
      */
@@ -265,7 +278,7 @@ public class MainActivity extends BaseGameActivity implements ResultDailog.OnAct
     @Override
     public void onSubmitClick() {
         loadingDialog.setMessage(getResources().getString(R.string.loading_submit));
-        loadingDialog.show();
+        loading(R.string.loading_submit);
         hangman.submitResult();
     }
 
@@ -304,4 +317,6 @@ public class MainActivity extends BaseGameActivity implements ResultDailog.OnAct
         NetClient.cancel(HangmanApi.ACTION.SUBMIT_RESULT);
         super.onDestroy();
     }
+
+
 }
