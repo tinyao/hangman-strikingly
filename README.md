@@ -70,8 +70,4 @@ After play the game once and once again, I got `1180` finally. And, To be honest
 
 ---
 
-This is a really interesting interview test. No matter what result it end with, I like the task, I enjoy the time working on it.
-
- As I told some friends, the task not only test my programming skills, and it reflact my vocabulary and logical thinking. It is really a stone kills many birds. The experience is different as my previous interviews. It is more carefully designed. I think Strinkingly must be interesting, open and careful. 
-
-Wish to 
+This is really an interesting interview test. No matter what result it end with, I enjoy the time working on it, it seems like a hackday.
