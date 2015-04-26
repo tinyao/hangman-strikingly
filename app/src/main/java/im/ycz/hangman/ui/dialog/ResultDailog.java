@@ -23,7 +23,7 @@ public class ResultDailog extends Dialog {
 
     private Score mScore;
     private String title;
-    private TextView titleView, mScoreTv, totalWordTv, correctWordTv, wrongGuessTv;
+    private TextView titleView, mScoreTv, scoreDetailTv;
     private Button submitBtn, exitBtn, nextBtn;
 
     /**
@@ -48,9 +48,7 @@ public class ResultDailog extends Dialog {
 
         titleView = (TextView) findViewById(R.id.tv_dialog_title);
         mScoreTv = (TextView) findViewById(R.id.tv_dialog_score);
-        totalWordTv = (TextView) findViewById(R.id.tv_dialog_total_words);
-        correctWordTv = (TextView) findViewById(R.id.tv_dialog_correct_words);
-        wrongGuessTv = (TextView) findViewById(R.id.tv_dialog_wrong_guess);
+        scoreDetailTv = (TextView) findViewById(R.id.tv_dialog_score_detail);
 
         submitBtn = (Button) findViewById(R.id.btn_dialog_submit);
         exitBtn = (Button) findViewById(R.id.btn_dialog_exit_game);
@@ -105,9 +103,9 @@ public class ResultDailog extends Dialog {
 
         if (mScore == null) return;
         mScoreTv.setText("" + mScore.score);
-        totalWordTv.setText("" + mScore.totalWordCount);
-        correctWordTv.setText("" + mScore.correctWordCount);
-        wrongGuessTv.setText("" + mScore.totalWrongGuessCount);
+        scoreDetailTv.setText("Words: " + mScore.totalWordCount
+                + ";  Correct: " + mScore.correctWordCount
+                + ";  WrongGuess: " + mScore.totalWrongGuessCount);
     }
 
     /**

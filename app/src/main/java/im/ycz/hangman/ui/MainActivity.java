@@ -1,6 +1,7 @@
 package im.ycz.hangman.ui;
 
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
@@ -257,6 +258,8 @@ public class MainActivity extends BaseGameActivity implements ResultDailog.OnAct
 
         if (isCheckScore) {
             dialog.setCanceledOnTouchOutside(true);
+            dialog.setTitle("");
+            isCheckScore = !isCheckScore;
         } else {
             dialog.setCanceledOnTouchOutside(false);
             dialog.setTitle(hangman.isDead() ?
@@ -264,6 +267,12 @@ public class MainActivity extends BaseGameActivity implements ResultDailog.OnAct
                     getResources().getString(R.string.game_word_correct) + wordTv.getText());
         }
         dialog.setResultScore(hangman.mScore);
+        dialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
+            @Override
+            public void onCancel(DialogInterface dialog) {
+                if(!wordTv.getText().toString().contains("*")) nextWord();
+            }
+        });
         dialog.show();
     }
 

@@ -136,6 +136,9 @@ public class HomeActivity extends BaseGameActivity {
         super.onDestroy();
     }
 
+    /**
+     * Show loading dialog, prevent exiting immerse mode
+     */
     private void loading() {
         pd.getWindow().setFlags(WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE, WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE);
         pd.show();
