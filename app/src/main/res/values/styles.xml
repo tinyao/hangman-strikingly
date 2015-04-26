@@ -1,0 +1,38 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:background">@android:color/white</item>
+    </style>
+
+    <style name="FlatButton">
+        <item name="android:paddingBottom">3dp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/text_size_medium</item>
+    </style>
+
+    <style name="FlatButton.Red">
+        <item name="android:background">@drawable/btn_red</item>
+    </style>
+
+    <style name="FlatButton.Green">
+        <item name="android:background">@drawable/btn_green</item>
+    </style>
+
+    <style name="FlatButton.Green.Circle">
+        <item name="android:background">@drawable/btn_circle_green</item>
+    </style>
+
+    <style name="DivideLine">
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/green</item>
+    </style>
+
+    <style name="ResultDailog" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="FlatButton.Orange">
+        <item name="android:background">@drawable/btn_orange</item>
+    </style>
+
+</resources>

@@ -1,0 +1,19 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="height_keyboard_item">40dp</dimen>
+    <dimen name="spacing_keyboard_item">10dp</dimen>
+    <dimen name="spacing_keyboard_margin">24dp</dimen>
+    <dimen name="keysize">22sp</dimen>
+    <dimen name="height_keyboard_view">176dp</dimen>
+    <dimen name="text_size_medium">18sp</dimen>
+    <dimen name="height_btn_medium">48dp</dimen>
+    <dimen name="height_toolbar">40dp</dimen>
+    <dimen name="size_progress_circle">40dp</dimen>
+    <dimen name="text_size_huge">50sp</dimen>
+    <dimen name="text_size_normal">16sp</dimen>
+    <dimen name="width_dialog_result">400dp</dimen>
+
+</resources>
