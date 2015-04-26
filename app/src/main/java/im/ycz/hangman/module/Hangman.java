@@ -143,6 +143,10 @@ public class Hangman {
         return gameOver;
     }
 
+    public void gameOver() {
+        gameOver = true;
+    }
+
 
     /**
      * Cache the current game session

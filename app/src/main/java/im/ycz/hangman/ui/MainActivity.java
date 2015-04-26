@@ -213,7 +213,10 @@ public class MainActivity extends BaseGameActivity implements ResultDailog.OnAct
             case SUBMIT_RESULT:
                 Toast.makeText(MainActivity.this,
                         R.string.toast_submit_done, Toast.LENGTH_SHORT).show();
+                hangman.gameOver();
+                hangman.save(MainActivity.this);
                 loadingDialog.dismiss();
+                finish();
                 break;
             default:
                 break;
