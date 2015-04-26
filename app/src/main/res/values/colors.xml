@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <color name="red">#E74C3C</color>
     <color name="red_dark">#C0392B</color>
     <color name="green">#16C4B6</color>
     <color name="green_dark">#009688</color>
     <color name="light">#fff</color>
     <color name="light_dark">#bbb</color>
+    <color name="orange_dark">#DA9117</color>
+    <color name="orange">#F5A623</color>
 
     <color name="keyborad_yellow">#F7E2C1</color>
     <color name="color_accent">#E67E22</color>
     <color name="dark">#333333</color>
-    <color name="orange_dark">#DA9117</color>
-    <color name="orange">#F5A623</color>
+
 </resources>

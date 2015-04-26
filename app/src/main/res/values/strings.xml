@@ -27,6 +27,7 @@
     <string name="toast_wait_letter">Current letter is judging, wait a second !</string>
     <string name="toast_wait_word">Retreiving word, wait a second !</string>
 
+    <!-- Hint -->
     <string name="hint_enter_playerId">Enter your PlayerID: </string>
     <string name="hint_cancel">CANCEL</string>
     <string name="hint_yes">YES</string>
