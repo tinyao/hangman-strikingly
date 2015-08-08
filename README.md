@@ -1,7 +1,7 @@
 # Hangman Android - Strikingly Interview Test
 
 ## Introduction
-This is a Android Client for the Strinkingly Hangman Interview Test. 
+This is an Android Client for the Strinkingly Hangman Interview Test. 
 
 ## Implementation
 
